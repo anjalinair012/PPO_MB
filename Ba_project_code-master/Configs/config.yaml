@@ -1,0 +1,59 @@
+project_title : "Trial"
+title : "full observation, reward further simplified. 200 steps_per_epoch"
+load_model : "True"
+load_iters_mb :  0 #negative value equals None
+#Dynamic model
+mb_layers: 4
+mb_members: 1
+mb_ensemble: "False"
+mb_networkUnits: 500
+mb_batchSize : 512
+mb_init_epochs : 200
+mb_epoch : 50
+observation_size : 94
+difficulty : 1
+to_log : "False"
+#lr : 3e-4
+
+#ModelBAse aggregation
+mb_aggregate : "False"
+mb_aggregate_epochs : 20 #not used yet
+mpc_timestep : 500
+mpc_max_rollot : 10  #number of trajectories planned by mpc
+mpc_collection_length : 10 #horizon length for each trajectory planned by mpc
+mb_num_aggregate : 10  #number of times we collect D-rl
+aggregate_every_iter : 10
+fraction_use_new: 0.0
+mb_train_every_iter: 1
+timesteps_on_mb : 8  #length of trajetories collected for PPO update
+
+#Scaling
+mb_scaler : "StandardMinMax"
+data_collection:
+    num_rollouts_train: 700
+    num_rollouts_val: 20
+
+
+#PPO config
+load_policy : "True"
+
+controller:
+    horizon: 5
+    num_control_samples: 15000
+
+aggregation:
+    num_aggregation_iters: 1
+    num_trajectories_for_aggregation: 2
+    rollouts_forTraining: 1
+
+
+steps:
+    dt_steps: 1
+    steps_per_episode: 1000
+    steps_per_rollout_train: 1000
+    steps_per_rollout_val: 200
+
+
+generic:
+    visualize_True: True
+    visualize_False: False

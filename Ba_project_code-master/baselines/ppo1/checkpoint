@@ -1,0 +1,2 @@
+model_checkpoint_path: "/home/brown/Desktop/DRL-project/../DRL-project-Results/aa1/models/aa1_afterIter_700.model"
+all_model_checkpoint_paths: "/home/brown/Desktop/DRL-project/../DRL-project-Results/aa1/models/aa1_afterIter_700.model"

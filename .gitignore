@@ -1,0 +1,10 @@
+**/logs
+**/*.csv
+Ba_project_code-master/*.csv
+Ba_project_code-master/*.txt
+Ba_project_code-master/.neptune/
+Ba_project_code-master/Results/
+Ba_project_code-master/datasets/
+Ba_project_code-master/*.log
+Ba_project_code-master/baselines/ppo2/
+Ba_project_code-master/__pycache__/
